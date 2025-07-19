@@ -15,7 +15,7 @@ const CTA = ({ title, subTitle, height = "h-[511px]" }) => {
         )}
       >
         <LightingEffectCenter />
-        <div className="font-manrope flex flex-col items-center gap-[25px] text-center max-w-[600px] mx-auto">
+        <div className=" flex flex-col items-center  text-center max-w-[600px] mx-auto">
           <div className="text-[48px] leading-[54px] -tracking-[0.04em] text-white opacity-60">
             <TextAnimate
               as="h2"
