@@ -2,6 +2,7 @@
   import dynamic from "next/dynamic";
   import Faq from "../components/faq";
   import CTA from "../CTA";
+  import Trust from "../components/trust";
   const Why = dynamic(() => import("../components/why"), { ssr: false });
   import Feature from "../components/feature";
   import { AppleCardsCarouselDemo } from "../components/what";
@@ -50,6 +51,7 @@
         </section>
         <section id="why">
           <Why />
+          <Trust/>
         </section>
         <section id="testimonials">
           <Testimonail />

@@ -159,7 +159,7 @@ export const Card = ({
         <div className="relative z-40 p-8 ">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-left  font-sans text-sm font-medium text-white opacity-80 md:text-base">
+            className="text-left  font-sans text-sm font-semibold text-[#f87a09]  md:text-[20px]">
             {card.category}
           </motion.p>
           <motion.p

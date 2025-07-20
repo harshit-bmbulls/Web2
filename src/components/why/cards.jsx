@@ -33,12 +33,12 @@ const Cards = () => {
   return (
     <>
       {/* Features Grid */}
-      <div className="border-b border-t border-[#5f5f7138] w-full">
+      <div className="border-b border-l-0  border-t border-[#f87a09] w-full">
         <div className="grid grid-cols-1 md:grid-cols-4 max-w-[1200px] mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="px-5 py-4 border-l border-r border-[#5f5f7138] hover:border-[#2c2c2c] transition-colors duration-300 first:border-l-0 last:border-r-0 md:first:border-l md:last:border-r border-b md:border-b-0 last:border-b-0"
+              className="px-5 py-4 border-l border-r border-[#f87a09] hover:border-[#b39073] transition-colors duration-300 md:first:border-l md:last:border-r border-b md:border-b-0 last:border-b-0"
             >
               <div className="flex items-start mt-2">
                 <div

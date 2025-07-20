@@ -45,7 +45,7 @@ export const products = [
   },
 
   {
-    title: "Proof",
+    title: "Our Work",
     link: "https://www.writtenlyhub.com/",
     thumbnail:
       "profit.png",
@@ -77,16 +77,16 @@ export const products = [
   },
 
   {
-    title: "Founder",
+    title: "Proof",
     link: "https://www.writtenlyhub.com/",
     thumbnail:
-      "founder.png",
+      "proof.png",
   },
   {
-    title: "Founder ",
+    title: "Our Growth  ",
     link: "https://www.writtenlyhub.com/",
     thumbnail:
-      "founder2.webp",
+      "mix.png",
   },
   {
     title: "Our Content Performance",

@@ -36,7 +36,7 @@ const FeatureCard = ({ feature, radialGradient, cardMaskStyle }) => (
     style={radialGradient}
   >
     <div
-      className="border-2 border-white/50 absolute inset-0 rounded-[18px] xs:rounded-[20px] sm:rounded-[22px] md:rounded-[25px]"
+      className="border-2 border-[#f87a09] absolute inset-0 rounded-[18px] xs:rounded-[20px] sm:rounded-[22px] md:rounded-[25px]"
       style={cardMaskStyle}
     />
     <h3 className="text-gradient font-dm-sans text-[18px] xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] leading-[22px] xs:leading-[24px] sm:leading-[26px] md:leading-[28px] lg:leading-[30px] xl:leading-[34px] -tracking-[0.02em] sm:-tracking-[0.03em] relative z-20 break-words text-white">
@@ -53,12 +53,7 @@ export default function Feature() {
 
   // ✅ Avoid re-creating styles on each render
   const radialGradient = useMemo(() => ({
-    background: `radial-gradient(
-      ellipse at bottom right,
-      rgba(200, 110, 207, 0.2) 10%,
-      rgba(1, 4, 13, 0.9) 36%,
-      #01050F 0%
-    )`,
+    background: `#022150`,
     transition: "background 0.3s ease-in-out",
   }), []);
 
@@ -90,7 +85,7 @@ export default function Feature() {
       >
         <div
           id="feature-heading"
-          className="max-w-[290px] xs:max-w-[320px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[724px] text-center text-[30px] xs:text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px]  leading-[1.2] xs:leading-[1.18] sm:leading-[1.16] md:leading-[1.14] lg:leading-[1.12] xl:leading-[1.1] tracking-[-0.02em] xs:tracking-[-0.025em] sm:tracking-[-0.03em] md:tracking-[-0.04em] lg:tracking-[-0.045em] xl:tracking-[-0.05em] text-white opacity-60 px-2 break-words">
+          className="max-w-[290px] xs:max-w-[320px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[724px] text-center text-[30px] xs:text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px]  leading-[1.2] xs:leading-[1.18] sm:leading-[1.16] md:leading-[1.14] lg:leading-[1.12] xl:leading-[1.1] tracking-[-0.02em] xs:tracking-[-0.025em] sm:tracking-[-0.03em] md:tracking-[-0.04em] lg:tracking-[-0.045em] xl:tracking-[-0.05em] text-[#f87a09] px-2 ">
           <TextAnimate
             animation="blurInUp"
             duration={0.4}

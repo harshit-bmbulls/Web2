@@ -11,7 +11,7 @@ export function AppleCardsCarouselDemo() {
 
   return (
     <div className="w-full h-full py-10">
-      <div className="max-w-7xl pl-4 mx-auto text-[30px] md:text-[48px]  text-white opacity-60 font-sans">
+      <div className="max-w-7xl pl-4 mx-auto text-[30px] md:text-[48px]  text-[#f87a09] font-sans">
         <TextAnimate as="h2" duration={0.8}  animation="blurInUp" by="word" >
         What We Do
         </TextAnimate>

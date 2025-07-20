@@ -81,16 +81,16 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen mt-20 bg-black max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-0">
+    <div className="min-h-screen mt-20 bg-[#022150] max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-0">
       <div className="">
         <div className="mb-8">
-          <div className="text-white opacity-60 text-[28px] sm:text-[36px] lg:text-[48px] text-center mb-4">
+          <div className="text-[#f87a09]  text-[28px] sm:text-[36px] lg:text-[48px] text-center mb-4">
             <TextAnimate as="h2" animation="blurInUp" by="word">
               Clients who stopped losing deals
             </TextAnimate>
           </div>
 
-          <div className="text-center text-white opacity-60 text-[14px] sm:text-[15px] lg:text-[16px]">
+          <div className="text-center text-[#f87a09]  text-[14px] sm:text-[15px] lg:text-[16px]">
             <TextAnimate
               animation="blurInUp"
               as="p"

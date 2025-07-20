@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 
 const CTA = ({ title, subTitle, height = "h-[511px]" }) => {
   return (
-    <section className=" bg-[#0c0b14] rounded-[25px] mt-20 max-w-[1200px] mx-auto" >
+    <section className=" bg-[#022150] rounded-[25px] mt-20 max-w-[1200px] mx-auto" >
       <div
         className={twMerge(
           ` flex flex-col items-center overflow-hidden rounded-[25px] relative pt-[92px] bg-cover bg-no-repeat `,

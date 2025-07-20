@@ -43,30 +43,30 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-black text-white z-20">
+    <div className="bg-[#022150] text-white z-20">
       {/* Header Section */}
-      <div className="border-b border-[#5f5f7138] h-36 w-full pb-8">
-        <div className="max-w-[1184px] h-36 mx-auto  border-[#5f5f7138]"></div>
+      <div className="border-b border-[#f87a09] h-36 w-full pb-8">
+        <div className="max-w-[1184px] h-36 mx-auto  border-[#f87a09]"></div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-[1184px] mx-auto border-l border-r border-[#5f5f7138]">
+      <div className="max-w-[1184px] mx-auto border-l border-r border-[#f87a09]">
         {/* Title Section */}
         <div className="flex justify-between">
-          <div className="p-4 border-r border-[#5f5f7138] w-full">
-            <div className="text-[#F5F5F5] text-[48px] opacity-60">
+          <div className="p-4 border-r border-[#f87a09] w-full">
+            <div className="text-[#f87a09] text-[48px] ">
               <TextAnimate as="h1" animation="blurInUp" by="word" once>
                 FAQ
               </TextAnimate>
             </div>
-            <div className="opacity-60 text-[#D5D5D5] text-[16px] mt-3">
+            <div className=" text-[#D5D5D5] text-[16px] mt-3">
               <TextAnimate as="p" animation="blurInUp" by="word" once>
                 Find everything you need to know about Content
               </TextAnimate>
             </div>
           </div>
           <div className="w-98 relative flex">
-              <button className="text-[#00FFB2]   w-full cursor-pointer border-t  border-[#5f5f7138] p-4 hover:bg-[#080a09] absolute bottom-0  pl-12 font-normal text-[18px] flex items-center">
+              <button className="text-white   w-full cursor-pointer border-t  border-[#f87a09] p-4 hover:bg-[#f87a09] absolute bottom-0  pl-12 font-normal text-[18px] flex items-center">
                 Call Now
                 <ArrowUpRight size={24} />
               </button>
@@ -74,12 +74,12 @@ const FAQ = () => {
         </div>
 
         {/* FAQ Section - Updated layout */}
-        <div className="flex flex-wrap border-t border-[#5f5f7138] cursor-pointer ">
+        <div className="flex flex-wrap border-t border-[#f87a09] cursor-pointer ">
           {faqs.map((faq, index) => (
             <div
               key={index}
               onClick={() => toggleFAQ(index)}
-              className="w-full md:w-1/2 border-b border-r border-l border-[#5f5f7138] p-6 h-fit"
+              className="w-full md:w-1/2 border-b border-r border-l border-[#f87a09] p-6 h-fit"
             >
               <div className="flex justify-between items-start ">
                 <div className="text-[#F5F5F5] text-[17px] font-medium">
@@ -128,8 +128,8 @@ const FAQ = () => {
       </div>
 
       {/* Bottom Spacing */}
-      <div className="border-y relative border-[#202026] h-[160px] w-full">
-        <div className="max-w-[1184px] w-full h-full mx-auto border-x border-[#202026]" />
+      <div className="border-y relative border-[#f87a09] h-[160px] w-full">
+        <div className="max-w-[1184px] w-full h-full mx-auto border-x border-[#f87a09]" />
       </div>
     </div>
   );

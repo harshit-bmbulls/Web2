@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import Link from "next/link";
 
 
 
@@ -27,7 +28,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="h-[300vh] py-40 overflow-hidden bg-[#022150] antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header />
       <motion.div
         style={{
@@ -62,7 +63,7 @@ export const Header = () => {
     <div
       className="max-w-[1200px] relative mx-auto py-10 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-[48px] font-bold dark:text-white">
-      The Ultimate development Content studio <span className="text-[#f87a09]">WrittenlyHub</span>
+      The Ultimate Content studio <span className="text-[#f87a09]">WrittenlyHub</span>
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
       Your best clients deserve to be case studies, not secrets 
@@ -85,14 +86,14 @@ export const ProductCard = ({
       }}
       key={product.title}
       className="group/product h-96 w-[30rem] relative shrink-0">
-      <a href={product.link} className="block group-hover/product:shadow-2xl ">
+      <Link href={product.link} className="block ">
         <img
           src={product.thumbnail}
           height="600"
           width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title} />
-      </a>
+      </Link>
       <div
         className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2
