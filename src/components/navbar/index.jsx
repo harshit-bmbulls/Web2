@@ -40,9 +40,9 @@ const Navbar = () => {
               href={"/"}
               className="p-px relative rounded-[15px] text-sm xl:text-base -tracking-[0.02em] group overflow-hidden flex-shrink-0"
             >
-              <div className="inset-[-595px_-759px_-583px_-727px] overflow-visible absolute -z-[1] bg-[conic-gradient(from_0deg_at_50%_50%,#000000_151.2deg,#00FFB2_176.4deg,#000000_331deg)] pointer-events-none animate-[spin_5s_linear_infinite]" />
-              <div className="px-4 xl:px-6 py-2.5 xl:py-3 flex gap-2 xl:gap-2.5 items-center bg-black text-white z-10 rounded-[15px] whitespace-nowrap">
-                Get Account
+              <div className="inset-[-595px_-759px_-583px_-727px] overflow-visible absolute -z-[1] bg-[conic-gradient(from_0deg_at_50%_50%,#f9953a_151.2deg,#ffffff_176.4deg,#f9953a_331deg)] pointer-events-none animate-[spin_5s_linear_infinite]" />
+              <div className="px-4 xl:px-6 py-2.5 xl:py-3 flex gap-2 xl:gap-2.5 items-center bg-black  text-white z-10 rounded-[15px] whitespace-nowrap">
+                Call Now
                 <ArrowUpRight
                   size={14}
                   stroke="white"
@@ -80,7 +80,7 @@ const Navbar = () => {
           <>
             {/* Background Overlay */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -89,7 +89,7 @@ const Navbar = () => {
   
             {/* Sidebar Panel */}
             <motion.div
-              className="fixed top-0 right-0 z-50 w-3/4 max-w-xs h-screen bg-black p-6 flex flex-col gap-6"
+              className="fixed top-0 right-0 z-50 w-3/4 max-w-xs h-screen bg-black/90 p-6 flex flex-col gap-6"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -131,9 +131,9 @@ const Navbar = () => {
                   onClick={() => setMenuOpen(false)}
                   className="p-px relative rounded-[15px] text-base -tracking-[0.02em] group overflow-hidden"
                 >
-                  <div className="inset-[-595px_-759px_-583px_-727px] overflow-visible absolute -z-[1] bg-[conic-gradient(from_0deg_at_50%_50%,#000000_151.2deg,#00FFB2_176.4deg,#000000_331deg)] pointer-events-none animate-[spin_5s_linear_infinite]" />
+                  <div className="inset-[-595px_-759px_-583px_-727px] overflow-visible absolute -z-[1] bg-[conic-gradient(from_0deg_at_50%_50%,#f9953a_151.2deg,#ffffff_176.4deg,#f9953a_331deg)] pointer-events-none animate-[spin_5s_linear_infinite]" />
                   <div className="px-6 py-3 flex gap-2.5 items-center bg-black text-white  z-10 rounded-[15px]">
-                    Get Account
+                    Call  Now
                     <ArrowUpRight
                       size={16}
                       stroke="white"
