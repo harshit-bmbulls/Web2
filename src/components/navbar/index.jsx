@@ -89,7 +89,7 @@ const Navbar = () => {
   
             {/* Sidebar Panel */}
             <motion.div
-              className="fixed top-0 right-0 z-50 w-3/4 max-w-xs h-screen bg-black/90 p-6 flex flex-col gap-6"
+              className="fixed top-0 right-0 z-50 w-3/4 max-w-xs h-screen bg-[#f9953a] p-6 flex flex-col gap-6"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
