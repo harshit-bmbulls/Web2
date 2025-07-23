@@ -73,7 +73,7 @@ export default function Feature() {
   return (
     <section
       ref={container}
-      className="w-full min-h-screen flex flex-col items-center py-12 sm:py-16 md:py-20 justify-center px-3 sm:px-4"
+      className="w-full  flex flex-col items-center py-18 px-3 sm:px-4"
       aria-labelledby="feature-heading"
     >
       {/* Optional animated lighting effect - comment if unnecessary */}

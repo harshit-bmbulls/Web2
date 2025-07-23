@@ -1,21 +1,24 @@
   "use client";
   import dynamic from "next/dynamic";
   import Faq from "../components/faq";
-  import CTA from "../CTA";
-  import Trust from "../components/trust";
-  const Why = dynamic(() => import("../components/why"), { ssr: false });
+  import Anyone from "../components/Anyone";
   import Feature from "../components/feature";
-  import { AppleCardsCarouselDemo } from "../components/what";
-  import { HeroParallaxDemo } from "../components/hero";
+  import ToolkitsSection from "../components/ToolkitsSection";
   const Testimonail = dynamic(() => import("../components/testimonail"), {
     ssr: false,
-    loading: () => <div className="h-[200px]" />, // fallback skeleton
+    loading: () => <div className="h-[200px]" />, 
   });
+  const BrandsMarquee3D = dynamic(() => import("../components/brands"), { ssr: false })
+  const HeroParallaxDemo = dynamic(
+    () => import("../components/hero").then((mod) => mod.HeroParallaxDemo),
+    { ssr: false }
+  )
 
-  import React, { useEffect, useRef } from "react";
-  import Lenis from "lenis";
+import React, { useEffect, useRef } from "react";
+import Lenis from "lenis";
+import PricingPlans from "../components/price";
 
-  export default function Home() {
+export default function Home() {
     const lenisRef = useRef(null);
 
     useEffect(() => {
@@ -36,6 +39,7 @@
         lenis.destroy();
       };
     }, []);
+   
     return (
       <>
       <div ref={lenisRef} className="smooth-scroll">
@@ -43,23 +47,25 @@
         <section id="hero">
           <HeroParallaxDemo />
         </section>
+        <section id="brands">
+          <BrandsMarquee3D />
+        </section>
         <section id="features">
           <Feature />
-        </section>
-        <section id="what">
-          <AppleCardsCarouselDemo />
-        </section>
-        <section id="why">
-          <Why />
-          <Trust/>
         </section>
         <section id="testimonials">
           <Testimonail />
         </section>
-        <section id="cta">
-          <CTA />
+        <section id="who">
+          <Anyone/>
         </section>
-          <Faq />
+        <section id="ToolkitsSection">
+          <ToolkitsSection />
+        </section>
+        <section id="price">
+          <PricingPlans/>
+        </section>
+          <Faq  chipText="FAQ" animationType="blurInUp" />
       </div>
       </>
     );

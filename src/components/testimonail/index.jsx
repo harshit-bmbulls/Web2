@@ -1,5 +1,14 @@
 import Image from "next/image";
 import { TextAnimate } from "../TextAnimater";
+// import Link from "next/link";
+import { ArrowUpRight, Phone } from "lucide-react";
+import PrimaryButton from "../Button";
+// import PrimaryButton from "@/components/Button";
+// import { PrimaryButton } from "@/components/Button"; // ✅ named import
+
+
+
+// import  PrimaryButton  from "../Button";
 
 const Index = () => {
   const gridItems = [
@@ -81,7 +90,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen mt-20 bg-[#022150] max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-0">
+    <div className="min-h-screen mt-20 bg-[#022150] max-w-[1200px] mx-auto px-4 sm:px-6 py-18 lg:px-0">
       <div className="">
         <div className="mb-8">
           <div className="text-[#f87a09]  text-[28px] sm:text-[36px] lg:text-[48px] text-center mb-4">
@@ -115,7 +124,7 @@ const Index = () => {
                   key={item.id}
                   className={`${
                     index === 0 ? "row-span-2" : "row-span-1"
-                  } bg-[#0c0b14] text-white rounded-[25px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative`}
+                  } bg-[#152f59] text-white border-[#69433f] border rounded-[25px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative`}
                 >
                   <div className="p-4">
                     {/* User image and name in top row */}
@@ -161,7 +170,7 @@ const Index = () => {
                   key={item.id}
                   className={`${
                     index === 2 ? "row-span-2" : "row-span-1"
-                  } bg-[#0c0b14] text-white rounded-[25px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative`}
+                  } bg-[#152f59] text-white border-[#69433f] border rounded-[25px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative`}
                 >
                   <div className="p-4">
                     {/* User image and name in top row */}
@@ -192,7 +201,7 @@ const Index = () => {
               .map((item) => (
                 <div
                   key={item.id}
-                  className="row-span-1 h-[370px] bg-[#0c0b14] text-white rounded-[25px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                  className="row-span-1 h-[370px] border-[#69433f] border bg-[#152f59] text-white rounded-[25px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
                 >
                   <div className="p-4">
                     {/* User image and name in top row */}
@@ -239,6 +248,8 @@ const Index = () => {
               ))}
           </div>
         </div>
+
+        <PrimaryButton title="Book a Call" />
 
         {/* Tablet Layout - 2 columns */}
         <div className="hidden md:grid lg:hidden grid-cols-2 gap-3 auto-rows-fr">

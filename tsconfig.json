@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/challenges/page.js", "src/app/components/TextAnimater.jsx", "src/app/components/faq/index.jsx", "src/app/page.jsx", "src/app/components/why/row.jsx", "src/app/components/why/index.jsx", "src/app/components/why/cards.jsx", "src/app/layout.jsx", "next.config.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/challenges/page.js", "src/app/components/TextAnimater.jsx", "src/app/components/faq/index.jsx", "src/app/page.jsx", "src/app/components/why/row.jsx", "src/app/components/why/index.jsx", "src/app/components/why/cards.jsx", "src/app/layout.jsx", "next.config.ts", "src/components/who/index.jsx", "src/components/Button.jsx"],
   "exclude": ["node_modules"]
 }

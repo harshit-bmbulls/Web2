@@ -41,7 +41,7 @@ const Navbar = () => {
               className="p-px relative rounded-[15px] text-sm xl:text-base -tracking-[0.02em] group overflow-hidden flex-shrink-0"
             >
               <div className="inset-[-595px_-759px_-583px_-727px] overflow-visible absolute -z-[1] bg-[conic-gradient(from_0deg_at_50%_50%,#f9953a_151.2deg,#ffffff_176.4deg,#f9953a_331deg)] pointer-events-none animate-[spin_5s_linear_infinite]" />
-              <div className="px-4 xl:px-6 py-2.5 xl:py-3 flex gap-2 xl:gap-2.5 items-center bg-black  text-white z-10 rounded-[15px] whitespace-nowrap">
+              <div className="px-4 xl:px-6 py-2.5 xl:py-3 flex gap-2 xl:gap-2.5 items-center bg-[#f87a0a]  text-white z-10 rounded-[15px] whitespace-nowrap">
                 Call Now
                 <ArrowUpRight
                   size={14}
@@ -156,7 +156,7 @@ const NavLinks = ({ onClick }) => {
     { name: "Why Us", href: "#hero" }, // ⬅️ use ID selector
     { name: "Our Solutions", href: "#features" },
     { name: "Fun Fact", href: "#what" },
-    { name: "Challenges", href: "#why" },
+    { name: "Who we are", href: "#who" },
     { name: "Client Area", href: "#testimonials" },
   ];
   
