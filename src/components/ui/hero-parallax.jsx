@@ -61,7 +61,7 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div
-      className="max-w-[1200px] relative mx-auto py-10 md:py-40 px-4 w-full  left-0 top-0">
+      className="max-w-[1200px] relative mx-auto md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-[48px] font-bold dark:text-white">
       The Ultimate Content studio <span className="text-[#f87a09]">WrittenlyHub</span>
       </h1>

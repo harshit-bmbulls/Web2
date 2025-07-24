@@ -3,35 +3,8 @@
 import Image from "next/image";
 import type React from "react";
 import { cn } from "@/lib/utlils";
-import Link from "next/link";
-import { ArrowUpRight, Phone } from "lucide-react";
 import PrimaryButton from "../Button";
 
-// const AnimatedSection = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
-//   const ref = useRef(null)
-//   const isInView = useInView(ref, { once: true })
-//   const controls = useAnimation()
-
-//   useEffect(() => {
-//     if (isInView) {
-//       controls.start("visible")
-//     }
-//   }, [isInView, controls])
-
-//   return (
-//     <motion.div
-//       ref={ref}
-//       animate={controls}
-//       initial="hidden"
-//       variants={{
-//         hidden: { opacity: 0, y: 30 },
-//         visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay } },
-//       }}
-//     >
-//       {children}
-//     </motion.div>
-//   )
-// }
 
 const Marquee = ({
   className,
@@ -48,7 +21,6 @@ const Marquee = ({
   children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
-  [key: string]: any;
 }) => {
   return (
     <div
@@ -84,26 +56,24 @@ const Marquee = ({
 const BrandCard = ({
   src,
   alt,
-  name,
 }: {
   src: string;
   alt: string;
-  name: string;
 }) => {
   return (
     <div
-      className={cn(
-        "relative w-32 h-16 cursor-pointer overflow-hidden rounded-xl  transition-all duration-300",
-        " transform hover:scale-105"
-      )}
+    className={cn(
+      "relative w-24 h-12 sm:w-28 sm:h-14 md:w-32 md:h-16 cursor-pointer overflow-hidden rounded-xl transition-all duration-300",
+      "transform hover:scale-105"
+    )}
     >
       <Image
         src={src || "/placeholder.svg"}
         loading="lazy"
         alt={alt}
-        width={96}
-        height={48}
-        className="h-full w-full object-contain filter grayscale hover:filter-none will-change-transform transition-all duration-300"
+        width={128}
+        height={64}
+        className="h-full w-full object-contain filter grayscale hover:filter-none  transition-all duration-300"
       />
     </div>
   );
@@ -111,12 +81,12 @@ const BrandCard = ({
 
 export default function BrandsMarquee3D() {
   const brands = [
-    { name: "upGrad", alt: "upGrad", src: "/brand-logo.svg" },
-    { name: "BCG", alt: "BCG", src: "/brands-1.png" },
-    { name: "ICICI", alt: "ICICI", src: "/brands-2.png" },
-    { name: "TATA", alt: "TATA", src: "/brands-3.png" },
-    { name: "redBus", alt: "redBus", src: "/brands-4.png" },
-    { name: "HSBC", alt: "HSBC", src: "/brands-5.png" },
+    { alt: "upGrad", src: "/brand-logo.svg" },
+    { alt: "BCG", src: "/brands-1.png" },
+    { alt: "ICICI", src: "/brands-2.png" },
+    { alt: "TATA", src: "/brands-3.png" },
+    { alt: "redBus", src: "/brands-4.png" },
+    { alt: "HSBC", src: "/brands-5.png" },
     { name: "Wazirx", alt: "Wazirx", src: "/brands-1.png" },
   ];
 
@@ -124,21 +94,24 @@ export default function BrandsMarquee3D() {
   const secondRow = brands.slice(Math.ceil(brands.length / 2));
 
   return (
-    <section className="w-full  ">
-      <div className="w-[65vw] mx-auto px-4">
+    <section className="w-full pt-15 pb-15 sm:pb-24 lg:pb-32">
+      <div className="w-full max-w-6xl mx-auto px-4 flex flex-col gap-8 items-center">
+        {/* Hero Image */}
         <Image
           src="/hero.png"
-          alt="brands-bg"
-          width={1000}
-          height={1000}
-          className="mx-auto"
+          alt="Hero"
+          width={1200}
+          height={600}
+          className="w-full h-auto max-w-4xl mx-auto object-contain"
         />
 
+        {/* CTA */}
         <PrimaryButton />
 
-        <div className="py-40">
-          <div className="text-center">
-            <p className="text-white text-lg">
+        {/* Marquee Section */}
+        <div className="w-full pt-16 sm:pt-24 py-20">
+          <div className="text-center mb-6">
+            <p className="text-white text-base sm:text-lg">
               Trusted by{" "}
               <span className="text-orange-500 font-semibold">
                 3,000+ Brands
@@ -146,24 +119,20 @@ export default function BrandsMarquee3D() {
             </p>
           </div>
 
-          <div className="relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
-            {/* First marquee - moves from right to left (default) */}
-            <Marquee pauseOnHover className="[--duration:30s]">
+          <div className="relative flex h-[120px] sm:h-[150px] md:h-[180px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+            {/* First marquee */}
+            <Marquee pauseOnHover className="[--duration:25s]">
               {firstRow.map((brand) => (
                 <BrandCard key={`first-${brand.name}`} {...brand} />
               ))}
             </Marquee>
 
-            {/* Second marquee - moves from left to right (reverse) */}
-            <Marquee reverse pauseOnHover className="[--duration:30s]">
+            {/* Second marquee - reversed */}
+            <Marquee reverse pauseOnHover className="[--duration:25s]">
               {secondRow.map((brand) => (
                 <BrandCard key={`second-${brand.name}`} {...brand} />
               ))}
             </Marquee>
-
-            {/* Ultra-subtle fade gradients that perfectly blend */}
-            {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-gray-50 via-gray-50/10 to-transparent opacity-60"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-gray-50 via-gray-50/10 to-transparent opacity-60"></div> */}
           </div>
         </div>
       </div>

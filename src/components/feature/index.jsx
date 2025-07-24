@@ -73,7 +73,7 @@ export default function Feature() {
   return (
     <section
       ref={container}
-      className="w-full  flex flex-col items-center py-18 px-3 sm:px-4"
+      className="w-full  flex flex-col items-center py-0  md:py-18  sm:px-4"
       aria-labelledby="feature-heading"
     >
       {/* Optional animated lighting effect - comment if unnecessary */}
@@ -85,10 +85,10 @@ export default function Feature() {
       >
         <div
           id="feature-heading"
-          className="max-w-[290px] xs:max-w-[320px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[724px] text-center text-[30px] xs:text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px]  leading-[1.2] xs:leading-[1.18] sm:leading-[1.16] md:leading-[1.14] lg:leading-[1.12] xl:leading-[1.1] tracking-[-0.02em] xs:tracking-[-0.025em] sm:tracking-[-0.03em] md:tracking-[-0.04em] lg:tracking-[-0.045em] xl:tracking-[-0.05em] text-[#f87a09] px-2 ">
+          className="max-w-[290px] xs:max-w-[320px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[724px] text-center text-[31px] xs:text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px]  leading-[1.2] xs:leading-[1.18] sm:leading-[1.16] md:leading-[1.14] lg:leading-[1.12] xl:leading-[1.1] tracking-[-0.02em] xs:tracking-[-0.025em] sm:tracking-[-0.03em] md:tracking-[-0.04em] lg:tracking-[-0.045em] xl:tracking-[-0.05em] text-[#f87a09] px-2 ">
           <TextAnimate
             animation="blurInUp"
-            duration={0.4}
+            duration={0.5}
             delay={0.8}
             once
             as="h2"

@@ -6,8 +6,6 @@ import PrimaryButton from "../Button";
 // import PrimaryButton from "@/components/Button";
 // import { PrimaryButton } from "@/components/Button"; // ✅ named import
 
-
-
 // import  PrimaryButton  from "../Button";
 
 const Index = () => {
@@ -90,10 +88,10 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen mt-20 bg-[#022150] max-w-[1200px] mx-auto px-4 sm:px-6 py-18 lg:px-0">
+    <div className="min-h-screen  bg-[#022150] max-w-[1200px] mx-auto px-4 sm:px-6  py-30 lg:px-0">
       <div className="">
         <div className="mb-8">
-          <div className="text-[#f87a09]  text-[28px] sm:text-[36px] lg:text-[48px] text-center mb-4">
+          <div className="text-[#f87a09]  text-[31px] xs:text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px]   text-center mb-4">
             <TextAnimate as="h2" animation="blurInUp" by="word">
               Clients who stopped losing deals
             </TextAnimate>
@@ -114,7 +112,7 @@ const Index = () => {
         </div>
 
         {/* Desktop Layout - 3 columns */}
-        <div className="hidden lg:grid grid-cols-3 gap-3 h-[750px]">
+        <div className="hidden lg:grid grid-cols-3 gap-3 h-[750px] px-0 lg:px-4">
           {/* Left Column */}
           <div className="grid grid-rows-3 gap-2">
             {gridItems
@@ -249,23 +247,16 @@ const Index = () => {
           </div>
         </div>
 
-        <PrimaryButton title="Book a Call" />
-
         {/* Tablet Layout - 2 columns */}
         <div className="hidden md:grid lg:hidden grid-cols-2 gap-3 auto-rows-fr">
           {gridItems.map((item) => (
             <div
               key={item.id}
-              className="bg-[#0c0b14] text-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative min-h-[200px]"
+              className="bg-[#152f59] text-white rounded-[20px] border-[#69433f] border overflow-hidden min-h-[200px]"
             >
               <div className="p-4 h-full flex flex-col">
                 {/* User image and name in top row */}
                 <div className="flex items-center gap-3 mb-3">
-                  <img
-                    src={`https://images.unsplash.com/${item.image}?auto=format&fit=crop&w=100&q=80`}
-                    alt={item.userName}
-                    className="w-[45px] h-[45px] rounded-full object-cover border-2 border-white shadow-sm"
-                  />
                   <h3 className="text-base font-semibold text-white">
                     {item.userName}
                   </h3>
@@ -288,7 +279,7 @@ const Index = () => {
                     />
                   </div>
                 )}
-                
+
                 {item.id === 8 && (
                   <div className="flex justify-center mt-4">
                     <Image
@@ -310,16 +301,11 @@ const Index = () => {
           {gridItems.map((item) => (
             <div
               key={item.id}
-              className="bg-[#0c0b14] text-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+              className="bg-[#152f59] text-white rounded-[20px] border-[#69433f] border "
             >
               <div className="p-4">
                 {/* User image and name in top row */}
                 <div className="flex items-center gap-3 mb-3">
-                  <img
-                    src={`https://images.unsplash.com/${item.image}?auto=format&fit=crop&w=100&q=80`}
-                    alt={item.userName}
-                    className="w-[40px] h-[40px] rounded-full object-cover border-2 border-white shadow-sm"
-                  />
                   <h3 className="text-base font-semibold text-white">
                     {item.userName}
                   </h3>
@@ -342,7 +328,7 @@ const Index = () => {
                     />
                   </div>
                 )}
-                
+
                 {item.id === 8 && (
                   <div className="flex justify-center mt-3">
                     <Image
@@ -359,6 +345,7 @@ const Index = () => {
           ))}
         </div>
       </div>
+      <PrimaryButton title="Book a Call" />
     </div>
   );
 };

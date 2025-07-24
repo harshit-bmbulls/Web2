@@ -4,6 +4,7 @@
   import Anyone from "../components/Anyone";
   import Feature from "../components/feature";
   import ToolkitsSection from "../components/ToolkitsSection";
+  import CaseStudiesSection from "../components/case-stuides";
   const Testimonail = dynamic(() => import("../components/testimonail"), {
     ssr: false,
     loading: () => <div className="h-[200px]" />, 
@@ -17,6 +18,7 @@
 import React, { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import PricingPlans from "../components/price";
+import { CardHoverEffectDemo } from "../components/future";
 
 export default function Home() {
     const lenisRef = useRef(null);
@@ -58,6 +60,12 @@ export default function Home() {
         </section>
         <section id="who">
           <Anyone/>
+        </section>
+        <section id="case-studies">
+          <CaseStudiesSection/>
+        </section>
+        <section id="future">
+          <CardHoverEffectDemo/>
         </section>
         <section id="ToolkitsSection">
           <ToolkitsSection />
